@@ -101,8 +101,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlmacenController.cs" />
+    <Compile Include="Controllers\AsistenciaOperarioController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\CobranzaPedidoController.cs" />
+    <Compile Include="Controllers\CompraProveedorController.cs" />
+    <Compile Include="Controllers\DetalleCompraProveedorController.cs" />
+    <Compile Include="Controllers\DetallePedidoController.cs" />
+    <Compile Include="Controllers\DocumentoPedidoController.cs" />
+    <Compile Include="Controllers\EntregaController.cs" />
+    <Compile Include="Controllers\EstadoPedidoController.cs" />
+    <Compile Include="Controllers\HistorialEstadoPedidoController.cs" />
+    <Compile Include="Controllers\IngresoHiloController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\MantenimientoMaquinaController.cs" />
+    <Compile Include="Controllers\MaquinaController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MonedaController.cs" />
+    <Compile Include="Controllers\OperarioController.cs" />
+    <Compile Include="Controllers\PagoProveedorController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\PermisoController.cs" />
+    <Compile Include="Controllers\ProduccionController.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\RolPermisoController.cs" />
+    <Compile Include="Controllers\SalidaHiloController.cs" />
+    <Compile Include="Controllers\TipoDocumentoController.cs" />
+    <Compile Include="Controllers\TipoHiloController.cs" />
+    <Compile Include="Controllers\TipoTejidoController.cs" />
+    <Compile Include="Controllers\TurnoController.cs" />
+    <Compile Include="Controllers\UnidadMedidaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,7 +185,37 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Almacen\" />
+    <Folder Include="Views\AsistenciaOperario\" />
+    <Folder Include="Views\Cliente\" />
+    <Folder Include="Views\CobranzaPedido\" />
+    <Folder Include="Views\CompraProveedor\" />
+    <Folder Include="Views\DetalleCompraProveedor\" />
+    <Folder Include="Views\DetallePedido\" />
+    <Folder Include="Views\DocumentoPedido\" />
+    <Folder Include="Views\Entrega\" />
+    <Folder Include="Views\EstadoPedido\" />
+    <Folder Include="Views\HistorialEstadoPedido\" />
+    <Folder Include="Views\IngresoHilo\" />
+    <Folder Include="Views\MantenimientoMaquina\" />
+    <Folder Include="Views\Maquina\" />
+    <Folder Include="Views\Moneda\" />
     <Folder Include="Views\NewFolder1\" />
+    <Folder Include="Views\Operario\" />
+    <Folder Include="Views\PagoProveedor\" />
+    <Folder Include="Views\Pedido\" />
+    <Folder Include="Views\Permiso\" />
+    <Folder Include="Views\Produccion\" />
+    <Folder Include="Views\Proveedor\" />
+    <Folder Include="Views\RolPermiso\" />
+    <Folder Include="Views\Rol\" />
+    <Folder Include="Views\SalidaHilo\" />
+    <Folder Include="Views\TipoDocumento\" />
+    <Folder Include="Views\TipoHilo\" />
+    <Folder Include="Views\TipoTejido\" />
+    <Folder Include="Views\Turno\" />
+    <Folder Include="Views\UnidadMedida\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

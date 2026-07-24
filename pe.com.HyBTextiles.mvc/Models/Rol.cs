@@ -14,17 +14,17 @@ namespace pe.com.HyBTextiles.mvc.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Código")]
         [Column("codigo")]
-        public int codigo { get; set; }
+        public int codrol { get; set; }
 
         [Required]
         [StringLength(100)]
         [Display(Name = "Nombre")]
         [Column("nombre")]
-        public string nombre { get; set; }
+        public string nomrol { get; set; }
 
         [Required]
         [Display(Name = "Estado")]
         [Column("estado")]
-        public bool estado { get; set; }
+        public bool estrol { get; set; }
     }
 }
