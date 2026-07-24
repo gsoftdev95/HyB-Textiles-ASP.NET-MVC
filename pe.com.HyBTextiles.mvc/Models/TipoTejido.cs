@@ -16,19 +16,16 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("codtte")]
         public int codtte { get; set; }
 
-
         [Required]
         [StringLength(100)]
         [Display(Name = "Nombre")]
         [Column("nomtte")]
         public string nomtte { get; set; }
 
-
         [StringLength(200)]
         [Display(Name = "Descripción")]
         [Column("desctte")]
         public string desctte { get; set; }
-
 
         [Required]
         [Display(Name = "Estado")]

@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,6 +109,7 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\CobranzaPedido.cs" />
     <Compile Include="Models\CompraProveedor.cs" />
+    <Compile Include="Models\db\ApplicationDbContext.cs" />
     <Compile Include="Models\DetalleCompraProveedor.cs" />
     <Compile Include="Models\DetallePedido.cs" />
     <Compile Include="Models\DocumentoPedido.cs" />
@@ -147,7 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Inicio\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

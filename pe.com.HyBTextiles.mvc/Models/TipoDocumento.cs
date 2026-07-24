@@ -16,13 +16,11 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("codtdo")]
         public int codtdo { get; set; }
 
-
         [Required]
         [StringLength(50)]
         [Display(Name = "Nombre Documento")]
         [Column("nomtdo")]
         public string nomtdo { get; set; }
-
 
         [Required]
         [Display(Name = "Estado")]

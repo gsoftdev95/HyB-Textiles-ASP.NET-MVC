@@ -16,28 +16,23 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("codrolper")]
         public int codrolper { get; set; }
 
-
         [Required]
         [Display(Name = "Código Rol")]
         [Column("codrol")]
         public int codrol { get; set; }
-
 
         [Required]
         [Display(Name = "Código Permiso")]
         [Column("codper")]
         public int codper { get; set; }
 
-
         [Required]
         [Display(Name = "Estado")]
         [Column("estrolper")]
         public bool estrolper { get; set; }
 
-
         // Relaciones
         public virtual Rol Rol { get; set; }
-
         public virtual Permiso Permiso { get; set; }
     }
 }

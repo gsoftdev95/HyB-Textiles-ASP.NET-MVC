@@ -16,13 +16,11 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("codest")]
         public int codest { get; set; }
 
-
         [Required]
         [StringLength(50)]
         [Display(Name = "Estado Pedido")]
         [Column("nomest")]
         public string nomest { get; set; }
-
 
         [Required]
         [Display(Name = "Estado")]

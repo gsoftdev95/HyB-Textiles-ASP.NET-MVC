@@ -16,18 +16,15 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("coddoc")]
         public int coddoc { get; set; }
 
-
         [Required]
         [Display(Name = "Pedido")]
         [Column("codped")]
         public int codped { get; set; }
 
-
         [Required]
         [Display(Name = "Tipo Documento")]
         [Column("codtdo")]
         public int codtdo { get; set; }
-
 
         [Required]
         [StringLength(30)]
@@ -35,24 +32,19 @@ namespace pe.com.HyBTextiles.mvc.Models
         [Column("numdoc")]
         public string numdoc { get; set; }
 
-
         [Required]
         [Display(Name = "Fecha Documento")]
         [Column("fecdoc")]
         public DateTime fecdoc { get; set; }
-
 
         [Required]
         [Display(Name = "Estado")]
         [Column("estdoc")]
         public bool estdoc { get; set; }
 
-
-
         // Relaciones
 
         public virtual Pedido Pedido { get; set; }
-
         public virtual TipoDocumento TipoDocumento { get; set; }
     }
 }
