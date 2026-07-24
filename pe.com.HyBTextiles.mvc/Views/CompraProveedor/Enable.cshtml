@@ -1,0 +1,38 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.CompraProveedor
+
+@{
+    ViewBag.Title = "Habilitación de CompraProveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-warning text-white"><h4 class="mb-0">Habilitación de CompraProveedor</h4></div>
+    <div class="card-body">
+        <div class="alert alert-warning">¿Estás seguro que deseas habilitar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codcom)</dd>
+            <dt class="col-sm-3">Fecha Compra</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.feccom)</dd>
+            <dt class="col-sm-3">Proveedor</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codprv)</dd>
+            <dt class="col-sm-3">Moneda</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmon)</dd>
+            <dt class="col-sm-3">Usuario</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codusu)</dd>
+            <dt class="col-sm-3">Total Compra</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.totcom)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estcom ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning">Habilitar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - CompraProveedor</div>
+</div></div>

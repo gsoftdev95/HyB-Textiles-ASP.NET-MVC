@@ -1,0 +1,51 @@
+﻿@model IEnumerable<pe.com.HyBTextiles.mvc.Models.DocumentoPedido>
+
+@{
+    ViewBag.Title = "Listado de DocumentoPedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow border-0">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Listado de DocumentoPedido</h4>
+            @Html.ActionLink("Registrar", "Create", null, new { @class = "btn btn-primary" })
+        </div>
+        <div class="card-body">
+            <div class="mb-3"><span class="badge bg-secondary">Total de Registros: @Model.Count()</span></div>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead><tr>
+                        <th>Código</th>
+                        <th>Pedido</th>
+                        <th>Tipo Documento</th>
+                        <th>Número Documento</th>
+                        <th>Fecha Documento</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr></thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.coddoc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codped)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codtdo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.numdoc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.fecdoc)</td>
+                                <td>@(item.estdoc ? "Habilitado" : "Deshabilitado")</td>
+                                <td class="text-center" style="white-space:nowrap">
+                                    @Html.ActionLink("Actualizar", "Edit", new { id = item.coddoc }, new { @class = "btn btn-success btn-sm" })
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.coddoc }, new { @class = "btn btn-danger btn-sm" })
+                                    @Html.ActionLink("Habilitar", "Enable", new { id = item.coddoc }, new { @class = "btn btn-warning btn-sm" })
+                                    @Html.ActionLink("Ver Detalle", "Details", new { id = item.coddoc }, new { @class = "btn btn-dark btn-sm" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer text-muted text-center">HyB Textiles - DocumentoPedido</div>
+    </div>
+</div>

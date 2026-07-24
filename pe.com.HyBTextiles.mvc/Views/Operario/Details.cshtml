@@ -1,0 +1,26 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Operario
+
+@{
+    ViewBag.Title = "Detalle de Operario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de Operario</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codope)</dd>
+            <dt class="col-sm-3">Nombre Operario</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomope)</dd>
+            <dt class="col-sm-3">Documento</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.docope)</dd>
+            <dt class="col-sm-3">Teléfono</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.telope)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estope ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Operario</div>
+</div></div>

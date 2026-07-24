@@ -1,0 +1,32 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalle de Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de Cliente</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codcli)</dd>
+            <dt class="col-sm-3">RUC</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.ruccli)</dd>
+            <dt class="col-sm-3">Razón Social</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.razonsocialcli)</dd>
+            <dt class="col-sm-3">Contacto</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomcontactocli)</dd>
+            <dt class="col-sm-3">Teléfono</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.telcli)</dd>
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.emacli)</dd>
+            <dt class="col-sm-3">Dirección</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.dircli)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estcli ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Cliente</div>
+</div></div>

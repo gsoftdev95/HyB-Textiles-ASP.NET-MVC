@@ -1,0 +1,40 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Proveedor
+
+@{
+    ViewBag.Title = "Habilitación de Proveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-warning text-white"><h4 class="mb-0">Habilitación de Proveedor</h4></div>
+    <div class="card-body">
+        <div class="alert alert-warning">¿Estás seguro que deseas habilitar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codprv)</dd>
+            <dt class="col-sm-3">RUC</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.rucprv)</dd>
+            <dt class="col-sm-3">Razón Social</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.razonsocialprv)</dd>
+            <dt class="col-sm-3">Contacto</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomcontactoprv)</dd>
+            <dt class="col-sm-3">Teléfono</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.telprv)</dd>
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.emaprv)</dd>
+            <dt class="col-sm-3">Dirección</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.dirprv)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estprv ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning">Habilitar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Proveedor</div>
+</div></div>

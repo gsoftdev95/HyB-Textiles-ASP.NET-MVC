@@ -1,0 +1,28 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.PagoProveedor
+
+@{
+    ViewBag.Title = "Detalle de PagoProveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de PagoProveedor</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codpgp)</dd>
+            <dt class="col-sm-3">Fecha Pago</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.fecpgp)</dd>
+            <dt class="col-sm-3">Compra</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codcom)</dd>
+            <dt class="col-sm-3">Moneda</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmon)</dd>
+            <dt class="col-sm-3">Monto Pago</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.montopgp)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estpgp ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - PagoProveedor</div>
+</div></div>

@@ -1,0 +1,30 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.DetallePedido
+
+@{
+    ViewBag.Title = "Detalle de DetallePedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de DetallePedido</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.coddet)</dd>
+            <dt class="col-sm-3">Pedido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codped)</dd>
+            <dt class="col-sm-3">Tipo Tejido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codtte)</dd>
+            <dt class="col-sm-3">Unidad Medida</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codund)</dd>
+            <dt class="col-sm-3">Cantidad</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.candet)</dd>
+            <dt class="col-sm-3">Precio</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.preciodet)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estdet ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - DetallePedido</div>
+</div></div>

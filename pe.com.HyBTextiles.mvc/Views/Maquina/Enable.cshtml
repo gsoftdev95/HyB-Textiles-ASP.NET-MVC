@@ -1,0 +1,32 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Maquina
+
+@{
+    ViewBag.Title = "Habilitación de Maquina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-warning text-white"><h4 class="mb-0">Habilitación de Maquina</h4></div>
+    <div class="card-body">
+        <div class="alert alert-warning">¿Estás seguro que deseas habilitar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmaq)</dd>
+            <dt class="col-sm-3">Nombre Máquina</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nommaq)</dd>
+            <dt class="col-sm-3">Capacidad</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.capmaq)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estmaq ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning">Habilitar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Maquina</div>
+</div></div>

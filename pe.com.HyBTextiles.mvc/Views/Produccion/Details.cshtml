@@ -1,0 +1,32 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Produccion
+
+@{
+    ViewBag.Title = "Detalle de Produccion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de Produccion</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codpro)</dd>
+            <dt class="col-sm-3">Fecha Producción</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.fecpro)</dd>
+            <dt class="col-sm-3">Máquina</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmaq)</dd>
+            <dt class="col-sm-3">Operario</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codope)</dd>
+            <dt class="col-sm-3">Tipo Tejido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codtte)</dd>
+            <dt class="col-sm-3">Pedido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codped)</dd>
+            <dt class="col-sm-3">Cantidad Producida</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.canpro)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estpro ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Produccion</div>
+</div></div>

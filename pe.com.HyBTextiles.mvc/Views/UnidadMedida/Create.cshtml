@@ -1,0 +1,43 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.UnidadMedida
+
+@{
+    ViewBag.Title = "Registrar UnidadMedida";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center"><div class="col-md-8">
+        <div class="card shadow border-0">
+            <div class="card-header bg-primary text-white"><h4 class="mb-0">Registrar UnidadMedida</h4></div>
+            <div class="card-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.nomund, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.nomund, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.nomund, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.abrund, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.abrund, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.abrund, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.estund, htmlAttributes: new { @class = "form-label fw-bold" })
+                            <div class="form-check form-switch">
+                                @Html.CheckBoxFor(model => model.estund, new { @class = "form-check-input" })
+                                <label class="form-check-label">Habilitado</label>
+                            </div>
+                        </div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="submit" class="btn btn-primary">Registrar UnidadMedida</button>
+                        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+                    </div>
+                }
+            </div>
+            <div class="card-footer text-muted text-center">HyB Textiles - UnidadMedida</div>
+        </div>
+    </div></div>
+</div>
