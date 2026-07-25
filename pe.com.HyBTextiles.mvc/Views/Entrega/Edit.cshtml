@@ -1,0 +1,49 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Entrega
+
+@{
+    ViewBag.Title = "Actualizar Entrega";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center"><div class="col-md-8">
+        <div class="card shadow border-0">
+            <div class="card-header bg-success text-white"><h4 class="mb-0">Actualizar Entrega</h4></div>
+            <div class="card-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                    @Html.HiddenFor(model => model.codent)
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.fecent, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.fecent, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fecent, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.codped, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.DropDownList("codped", (SelectList)ViewBag.codped, "-- Seleccione --", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.codped, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.respent, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.respent, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.respent, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.estent, htmlAttributes: new { @class = "form-label fw-bold" })
+                            <div class="form-check form-switch">
+                                @Html.CheckBoxFor(model => model.estent, new { @class = "form-check-input" })
+                                <label class="form-check-label">Habilitado</label>
+                            </div>
+                        </div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="submit" class="btn btn-success">Actualizar Entrega</button>
+                        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+                    </div>
+                }
+            </div>
+            <div class="card-footer text-muted text-center">HyB Textiles - Entrega</div>
+        </div>
+    </div></div>
+</div>

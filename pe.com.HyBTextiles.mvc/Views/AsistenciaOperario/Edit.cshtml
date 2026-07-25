@@ -1,0 +1,59 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.AsistenciaOperario
+
+@{
+    ViewBag.Title = "Actualizar AsistenciaOperario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center"><div class="col-md-8">
+        <div class="card shadow border-0">
+            <div class="card-header bg-success text-white"><h4 class="mb-0">Actualizar AsistenciaOperario</h4></div>
+            <div class="card-body">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                    @Html.HiddenFor(model => model.codasi)
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.codope, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.DropDownList("codope", (SelectList)ViewBag.codope, "-- Seleccione --", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.codope, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.codtur, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.DropDownList("codtur", (SelectList)ViewBag.codtur, "-- Seleccione --", new { @class = "form-select" })
+                            @Html.ValidationMessageFor(model => model.codtur, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.fecasi, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.fecasi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.fecasi, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.horaingasi, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.horaingasi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.horaingasi, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.horasaliasi, htmlAttributes: new { @class = "form-label fw-bold" })
+                            @Html.EditorFor(model => model.horasaliasi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.horasaliasi, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="mb-3">
+                            @Html.LabelFor(model => model.estasi, htmlAttributes: new { @class = "form-label fw-bold" })
+                            <div class="form-check form-switch">
+                                @Html.CheckBoxFor(model => model.estasi, new { @class = "form-check-input" })
+                                <label class="form-check-label">Habilitado</label>
+                            </div>
+                        </div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button type="submit" class="btn btn-success">Actualizar AsistenciaOperario</button>
+                        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+                    </div>
+                }
+            </div>
+            <div class="card-footer text-muted text-center">HyB Textiles - AsistenciaOperario</div>
+        </div>
+    </div></div>
+</div>

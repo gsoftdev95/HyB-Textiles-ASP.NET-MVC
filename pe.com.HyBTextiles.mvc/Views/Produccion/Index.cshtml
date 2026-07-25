@@ -1,0 +1,55 @@
+﻿@model IEnumerable<pe.com.HyBTextiles.mvc.Models.Produccion>
+
+@{
+    ViewBag.Title = "Listado de Produccion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow border-0">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Listado de Produccion</h4>
+            @Html.ActionLink("Registrar", "Create", null, new { @class = "btn btn-primary" })
+        </div>
+        <div class="card-body">
+            <div class="mb-3"><span class="badge bg-secondary">Total de Registros: @Model.Count()</span></div>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead><tr>
+                        <th>Código</th>
+                        <th>Fecha Producción</th>
+                        <th>Máquina</th>
+                        <th>Operario</th>
+                        <th>Tipo Tejido</th>
+                        <th>Pedido</th>
+                        <th>Cantidad Producida</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr></thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.codpro)</td>
+                                <td>@Html.DisplayFor(modelItem => item.fecpro)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codmaq)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codope)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codtte)</td>
+                                <td>@Html.DisplayFor(modelItem => item.codped)</td>
+                                <td>@Html.DisplayFor(modelItem => item.canpro)</td>
+                                <td>@(item.estpro ? "Habilitado" : "Deshabilitado")</td>
+                                <td class="text-center" style="white-space:nowrap">
+                                    @Html.ActionLink("Actualizar", "Edit", new { id = item.codpro }, new { @class = "btn btn-success btn-sm" })
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.codpro }, new { @class = "btn btn-danger btn-sm" })
+                                    @Html.ActionLink("Habilitar", "Enable", new { id = item.codpro }, new { @class = "btn btn-warning btn-sm" })
+                                    @Html.ActionLink("Ver Detalle", "Details", new { id = item.codpro }, new { @class = "btn btn-dark btn-sm" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer text-muted text-center">HyB Textiles - Produccion</div>
+    </div>
+</div>

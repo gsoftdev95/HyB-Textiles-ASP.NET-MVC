@@ -1,0 +1,34 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Entrega
+
+@{
+    ViewBag.Title = "Eliminación de Entrega";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-danger text-white"><h4 class="mb-0">Eliminación de Entrega</h4></div>
+    <div class="card-body">
+        <div class="alert alert-danger">¿Estás seguro que deseas eliminar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codent)</dd>
+            <dt class="col-sm-3">Fecha Entrega</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.fecent)</dd>
+            <dt class="col-sm-3">Pedido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codped)</dd>
+            <dt class="col-sm-3">Responsable Entrega</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.respent)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estent ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Entrega</div>
+</div></div>

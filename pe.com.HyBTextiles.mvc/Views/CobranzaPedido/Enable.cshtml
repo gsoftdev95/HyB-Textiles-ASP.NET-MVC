@@ -1,0 +1,36 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.CobranzaPedido
+
+@{
+    ViewBag.Title = "Habilitación de CobranzaPedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-warning text-white"><h4 class="mb-0">Habilitación de CobranzaPedido</h4></div>
+    <div class="card-body">
+        <div class="alert alert-warning">¿Estás seguro que deseas habilitar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codcob)</dd>
+            <dt class="col-sm-3">Fecha Cobranza</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.feccob)</dd>
+            <dt class="col-sm-3">Pedido</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codped)</dd>
+            <dt class="col-sm-3">Moneda</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmon)</dd>
+            <dt class="col-sm-3">Monto Cobrado</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.montocob)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estcob ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning">Habilitar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - CobranzaPedido</div>
+</div></div>

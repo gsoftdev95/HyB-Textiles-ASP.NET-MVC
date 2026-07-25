@@ -1,0 +1,22 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.TipoDocumento
+
+@{
+    ViewBag.Title = "Detalle de TipoDocumento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de TipoDocumento</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codtdo)</dd>
+            <dt class="col-sm-3">Nombre Documento</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomtdo)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.esttdo ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - TipoDocumento</div>
+</div></div>

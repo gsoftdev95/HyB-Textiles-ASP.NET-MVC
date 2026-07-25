@@ -1,0 +1,24 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.TipoHilo
+
+@{
+    ViewBag.Title = "Detalle de TipoHilo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de TipoHilo</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codthi)</dd>
+            <dt class="col-sm-3">Nombre</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomthi)</dd>
+            <dt class="col-sm-3">Descripción</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.descthi)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estthi ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - TipoHilo</div>
+</div></div>

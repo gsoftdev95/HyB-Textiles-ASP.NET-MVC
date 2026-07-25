@@ -1,0 +1,24 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Moneda
+
+@{
+    ViewBag.Title = "Detalle de Moneda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de Moneda</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codmon)</dd>
+            <dt class="col-sm-3">Nombre Moneda</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nommon)</dd>
+            <dt class="col-sm-3">Símbolo</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.simbmon)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estmon ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Moneda</div>
+</div></div>

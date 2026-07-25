@@ -1,0 +1,36 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.Usuario
+
+@{
+    ViewBag.Title = "Habilitación de Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-warning text-white"><h4 class="mb-0">Habilitación de Usuario</h4></div>
+    <div class="card-body">
+        <div class="alert alert-warning">¿Estás seguro que deseas habilitar este registro?</div>
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codusu)</dd>
+            <dt class="col-sm-3">Nombre Usuario</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.nomusu)</dd>
+            <dt class="col-sm-3">Usuario</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.userusu)</dd>
+            <dt class="col-sm-3">Clave</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.claveusu)</dd>
+            <dt class="col-sm-3">Código Rol</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codrol)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.estusu ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-warning">Habilitar</button>
+                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+            </div>
+        }
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - Usuario</div>
+</div></div>

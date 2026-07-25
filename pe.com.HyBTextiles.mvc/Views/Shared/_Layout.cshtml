@@ -42,7 +42,7 @@
         @*inicio del menu*@
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">CiberElectrik</a>
+                @Html.ActionLink("HyB Textil", "Index", "Inicio", null, new { @class = "navbar-brand" })
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,11 +53,11 @@
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="frmRol.aspx">Rol</a>
-                                        <a class="dropdown-item" href="frmUsuario.aspx">Usuario</a>
-                                        <a class="dropdown-item" href="frmPermiso.aspx">Permiso</a>
-                                        <a class="dropdown-item" href="frmRolPermiso.aspx">Rol Permiso</a>
-                                        <a class="dropdown-item" href="frmTipoDocumento.aspx">Tipo Documento</a>
+                                        @Html.ActionLink("Rol", "Index", "Rol", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Usuario", "Index", "Usuario", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Permiso", "Index", "Permiso", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Rol Permiso", "Index", "RolPermiso", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Tipo Documento", "Index", "TipoDocumento", null, new { @class = "dropdown-item" })
                                     </div>
                                 </div>
                             </div>
@@ -65,24 +65,24 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Datos Generales </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <a class="dropdown-item" href="frmCliente.aspx">Cliente</a>
-                                <a class="dropdown-item" href="frmProveedor.aspx">Proveedor</a>
-                                <a class="dropdown-item" href="frmOperario.aspx">Operario</a>
-                                <a class="dropdown-item" href="frmMoneda.aspx">Moneda</a>
-                                <a class="dropdown-item" href="frmUnidadMedida.aspx">Unidad de Medida</a>
-                                <a class="dropdown-item" href="frmAlmacen.aspx">Almacén</a>
-                                <a class="dropdown-item" href="frmTurno.aspx">Turno</a>
-                                <a class="dropdown-item" href="frmTipoHilo.aspx">Tipo Hilo</a>
-                                <a class="dropdown-item" href="frmTipoTejido.aspx">Tipo Tejido</a>
+                                @Html.ActionLink("Cliente", "Index", "Cliente", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Proveedor", "Index", "Proveedor", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Operario", "Index", "Operario", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Moneda", "Index", "Moneda", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Unidad de Medida", "Index", "UnidadMedida", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Almacén", "Index", "Almacen", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Turno", "Index", "Turno", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Tipo Hilo", "Index", "TipoHilo", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Tipo Tejido", "Index", "TipoTejido", null, new { @class = "dropdown-item" })
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pedidos </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <a class="dropdown-item" href="frmPedido.aspx">Pedido</a>
-                                <a class="dropdown-item" href="frmEstadoPedido.aspx">Estado Pedido</a>
-                                <a class="dropdown-item" href="frmHistorialEstadoPedido.aspx">Historial Estado</a>
-                                <a class="dropdown-item" href="frmDocumentoPedido.aspx">Documento Pedido</a>
+                                @Html.ActionLink("Pedido", "Index", "Pedido", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Estado Pedido", "Index", "EstadoPedido", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Historial Estado", "Index", "HistorialEstadoPedido", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Documento Pedido", "Index", "DocumentoPedido", null, new { @class = "dropdown-item" })
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -90,8 +90,8 @@
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="frmCompraProveedor.aspx">Compra Proveedor</a>
-                                        <a class="dropdown-item" href="frmPagoProveedor.aspx">Pago Proveedor</a>
+                                        @Html.ActionLink("Compra Proveedor", "Index", "CompraProveedor", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Pago Proveedor", "Index", "PagoProveedor", null, new { @class = "dropdown-item" })
                                     </div>
                                 </div>
                             </div>
@@ -101,12 +101,12 @@
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="frmProduccion.aspx">Producción</a>
-                                        <a class="dropdown-item" href="frmIngresoHilo.aspx">Ingreso Hilo</a>
-                                        <a class="dropdown-item" href="frmSalidaHilo.aspx">Salida Hilo</a>
-                                        <a class="dropdown-item" href="frmMaquina.aspx">Máquina</a>
-                                        <a class="dropdown-item" href="frmMantenimientoMaquina.aspx">Mantenimiento Máquina</a>
-                                        <a class="dropdown-item" href="frmAsistenciaOperario.aspx">Asistencia Operario</a>
+                                        @Html.ActionLink("Producción", "Index", "Produccion", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Ingreso Hilo", "Index", "IngresoHilo", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Salida Hilo", "Index", "SalidaHilo", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Máquina", "Index", "Maquina", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Mantenimiento Máquina", "Index", "MantenimientoMaquina", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Asistencia Operario", "Index", "AsistenciaOperario", null, new { @class = "dropdown-item" })
                                     </div>
                                 </div>
                             </div>
@@ -116,8 +116,8 @@
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="frmEntrega.aspx">Entrega</a>
-                                        <a class="dropdown-item" href="frmCobranzaPedido.aspx">Cobranza Pedido</a>
+                                        @Html.ActionLink("Entrega", "Index", "Entrega", null, new { @class = "dropdown-item" })
+                                        @Html.ActionLink("Cobranza Pedido", "Index", "CobranzaPedido", null, new { @class = "dropdown-item" })
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
 
         @*fin del cuerpo de la pagina*@
         <footer>
-            <p>&copy; @DateTime.Now.Year - <span>CiberElectrik</span> </p>
+            <p>&copy; @DateTime.Now.Year - <span>HyB Textil S.A.C.</span> </p>
         </footer>
     </div>
 

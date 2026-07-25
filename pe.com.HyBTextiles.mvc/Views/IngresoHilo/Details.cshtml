@@ -1,0 +1,32 @@
+﻿@model pe.com.HyBTextiles.mvc.Models.IngresoHilo
+
+@{
+    ViewBag.Title = "Detalle de IngresoHilo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4"><div class="card shadow border-0">
+    <div class="card-header bg-dark text-white"><h4 class="mb-0">Detalle de IngresoHilo</h4></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Código</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.coding)</dd>
+            <dt class="col-sm-3">Fecha Ingreso</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.fecing)</dd>
+            <dt class="col-sm-3">Tipo Hilo</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codthi)</dd>
+            <dt class="col-sm-3">Almacén</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codalm)</dd>
+            <dt class="col-sm-3">Unidad Medida</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codund)</dd>
+            <dt class="col-sm-3">Compra</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.codcom)</dd>
+            <dt class="col-sm-3">Cantidad Ingreso</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.caning)</dd>
+            <dt class="col-sm-3">Estado</dt>
+            <dd class="col-sm-9">@(Model.esting ? "Habilitado" : "Deshabilitado")</dd>
+        </dl>
+        @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-dark" })
+    </div>
+    <div class="card-footer text-muted text-center">HyB Textiles - IngresoHilo</div>
+</div></div>
