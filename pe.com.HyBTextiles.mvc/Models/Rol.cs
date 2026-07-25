@@ -17,7 +17,7 @@ namespace pe.com.HyBTextiles.mvc.Models
         public int codrol { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         [Display(Name = "Nombre")]
         [Column("nomrol")]
         public string nomrol { get; set; }
